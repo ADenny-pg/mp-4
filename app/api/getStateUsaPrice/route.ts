@@ -29,6 +29,7 @@ export async function GET(request: Request): Promise<NextResponse>{
         }
     );
 
+
     if(res.status === 429) {
         return NextResponse.json({error: "API Limit reached"}, {status: 429})
     }
